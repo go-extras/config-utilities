@@ -1,4 +1,4 @@
-package confutils
+package strutils
 
 import (
 	"log"

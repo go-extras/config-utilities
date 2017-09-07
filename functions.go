@@ -12,7 +12,7 @@ import (
 // expression with the variable value (even if it's empty).
 // If the environment variable does not exist, keeps the expression as is.
 func SubstEnvVars(text []byte) []byte {
-	reg, err := regexp.Compile("%ENV\\(([A-Za-z0-9]+)\\)")
+	reg, err := regexp.Compile("%ENV\\(([A-Za-z0-9\\_]+)\\)")
 	if err != nil {
 		log.Fatal(err)
 	}
